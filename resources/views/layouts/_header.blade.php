@@ -42,16 +42,23 @@
             </a>
 
             <ul class="dropdown-menu" role="menu">
-
               <li>
-                <a href="{{ route('users.edit',Auth::id()) }}">
-                  Edit
+                <a href="{{ route('users.show', Auth::id()) }}">
+                  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                    Personal Center
+                </a>
+              </li>
+              <li>
+                <a href="{{ route('users.edit', Auth::id()) }}">
+                  <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                    Edit Profile
                 </a>
               </li>
 
               <li>
                 <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                  Logout
+                  <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>
+                    Logout
                 </a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
