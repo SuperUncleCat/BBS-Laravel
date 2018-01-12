@@ -43,15 +43,23 @@
                     {!! $topic->body !!}
                 </div>
 
-                <div class="operate">
+                @can('update',$topic)
+                  <div class="operate">
                     <hr>
-                    <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-default btn-xs" role="button">
+                    <a href="{{ route('topics.edit', $topic->id) }}" class="btn btn-default btn-xs pull-left" role="button">
                         <i class="glyphicon glyphicon-edit"></i> Edit
                     </a>
-                    <a href="#" class="btn btn-default btn-xs" role="button">
-                        <i class="glyphicon glyphicon-trash"></i> Delete
-                    </a>
-                </div>
+
+                    <form action="{{ route('topics.destroy',$topic->id) }}" method="post">
+                      {{ csrf_field() }}
+                      {{ method_field('DELETE') }}
+                      <button type="submit" class="btn btn-default btn-xs pull-left" style="margin-left: 6px">
+                        <i class="glyphicon glyphicon-trash"></i>
+                        Delete
+                      </button>
+                    </form>
+                  </div>
+                @endcan
 
             </div>
         </div>
