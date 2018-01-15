@@ -30,6 +30,6 @@ class RepliesController extends Controller
 		    $this->authorize('destroy', $reply);
 		    $reply->delete();
 
-		    return redirect()->route('replies.index')->with('success', 'Deleted successfully.');
+		    return redirect()->to($reply->topic->link())->with('success', 'Deleted successfully.');
 	 }
 }
