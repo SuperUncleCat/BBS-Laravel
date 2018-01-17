@@ -48,7 +48,7 @@ return array(
             'replies',
         ],
         '站点管理' => [
-            'setting.site',
+            'settings.site',
             'links',
         ],
     ],
