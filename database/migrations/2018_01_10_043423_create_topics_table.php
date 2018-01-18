@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTopicsTable extends Migration 
+class CreateTopicsTable extends Migration
 {
 	public function up()
 	{
@@ -21,6 +21,8 @@ class CreateTopicsTable extends Migration
             $table->string('slug')->nullable();
             $table->timestamps();
         });
+
+
 	}
 
 	public function down()
