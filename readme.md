@@ -7,6 +7,10 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Snapshot
+
+![image](https://raw.githubusercontent.com/SuperUncleCat/BBS-Laravel/master/public/snapshots/BBS.PNG)
+
 ## Copy
 ```
 cd /var/www
